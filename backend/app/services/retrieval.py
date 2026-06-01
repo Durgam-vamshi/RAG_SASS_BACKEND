@@ -13,7 +13,11 @@ embeddings_model = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
-qdrant = QdrantClient(url=settings.QDRANT_URL)
+
+qdrant = QdrantClient(
+    url=settings.QDRANT_URL,
+    api_key=settings.QDRANT_API_KEY
+)
 
 
 async def hybrid_search(

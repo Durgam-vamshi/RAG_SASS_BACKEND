@@ -20,6 +20,13 @@ embeddings_model = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
+print("QDRANT_URL:", settings.QDRANT_URL)
+print("QDRANT_API_KEY EXISTS:", bool(settings.QDRANT_API_KEY))
+print(
+    "QDRANT_API_KEY LENGTH:",
+    len(settings.QDRANT_API_KEY) if settings.QDRANT_API_KEY else 0
+)
+
 # qdrant = QdrantClient(url=settings.QDRANT_URL)
 qdrant = QdrantClient(
     url=settings.QDRANT_URL,
