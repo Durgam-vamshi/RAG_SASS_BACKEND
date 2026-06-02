@@ -1,26 +1,5 @@
-# from pydantic import BaseModel
-# from typing import List
-
-# class QueryRequest(BaseModel):
-#     question: str
-
-# class Citation(BaseModel):
-#     document: str
-#     page: int
-#     chunk: str
-
-# class QueryResponse(BaseModel):
-#     answer: str
-#     citations: List[Citation]
-
-
-
-
-
-
-
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 
 class QueryRequest(BaseModel):
@@ -30,7 +9,7 @@ class QueryRequest(BaseModel):
 
 class Citation(BaseModel):
     document: str
-    page: int
+    page: Optional[int] = None
     chunk: str
 
 
