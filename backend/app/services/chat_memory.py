@@ -1,31 +1,3 @@
-# from app.models.chat import ChatMessage
-
-
-# def get_conversation(db, session_id):
-#     return (
-#         db.query(ChatMessage)
-#         .filter(ChatMessage.session_id == session_id)
-#         .order_by(ChatMessage.created_at.asc())
-#         .all()
-#     )
-
-
-# def save_message(
-#     db,
-#     session_id,
-#     role,
-#     content
-# ):
-#     msg = ChatMessage(
-#         session_id=session_id,
-#         role=role,
-#         content=content
-#     )
-
-#     db.add(msg)
-#     db.commit()
-
-
 from app.models.chat import ChatMessage, ChatSession
 
 
