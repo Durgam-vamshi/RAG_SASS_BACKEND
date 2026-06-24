@@ -1,24 +1,3 @@
-# import cohere
-# from app.core.config import settings
-
-# co = cohere.Client(settings.COHERE_API_KEY)
-
-# async def rerank(query: str, candidates: list, top_n: int = 5) -> list:
-#     if not candidates:
-#         return []
-
-#     docs = [c.payload["text"] for c in candidates]
-
-#     results = co.rerank(
-#         query=query,
-#         documents=docs,
-#         model="rerank-english-v3.0",
-#         top_n=top_n
-#     )
-
-#     return [candidates[r.index] for r in results.results]
-
-
 from sentence_transformers import CrossEncoder
 
 reranker_model = CrossEncoder(
